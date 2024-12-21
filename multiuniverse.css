@@ -1,0 +1,438 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* 電腦版網頁css設計 */
+header {
+  height: 100px;
+  width: 100%;
+  background-color: rgba(68, 68, 68, 0.8);
+  position: fixed;
+}
+
+h1 {
+  position: absolute;
+  line-height: 100px;
+  width: 200px;
+  text-indent: -9999px;
+  background-image: url(sceneryimg_f_241221/HeadLOGO.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.normalmenu {
+  position: absolute;
+  line-height: 120px;
+  right: 5vw;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+header li {
+  display: inline;
+  margin-right: 1vw;
+}
+
+.show-modal {
+  background-color: rgba(35, 28, 26, 0);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: monospace;
+}
+
+.show-modal:hover {
+  text-decoration: underline;
+  color: deepskyblue;
+  transition: 0.5s ease;
+}
+
+.show-modal:focus {
+  outline: none;
+}
+
+.intro {
+  height: 110vh;
+  background-image: url("sceneryimg_f_241221/黃金博物館.JPG");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.intro h2 {
+  font-size: 45px;
+  font-family: monospace;
+  margin-top: 45px;
+}
+
+.intro p {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: monospace;
+  color: #fef7e6;
+  margin: 30px 0;
+}
+
+.intro a {
+  font-size: 15px;
+  font-family: monospace;
+  color: white;
+  text-decoration: none;
+  border: 2px solid #acacac;
+  padding: 10px 18px;
+  border-radius: 20px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 120px 140px 100px;
+  background: linear-gradient(to bottom, #9b9b83, #f0f0eb);
+}
+
+.gallery div {
+  text-align: center;
+  width: 290px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.kamakurashi img {
+  border-radius: 25px;
+}
+
+.gallery h3 {
+  font-size: 20px;
+  font-family: monospace;
+  margin: 30px 0;
+}
+
+.gallery p {
+  font-size: 13px;
+  font-family: monospace;
+  line-height: 1.5em;
+}
+
+.motto {
+  color: black;
+  background: linear-gradient(to right, #cacccd, #90b1c6);
+  border: 1px solid;
+  font-size: 25px;
+  font-family: fantasy;
+  line-height: 2.4em;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.symbol {
+  display: flex;
+}
+
+.symbol img {
+  width: 45%;
+}
+
+.description {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, rgb(235, 222, 177), rgb(203, 203, 202));
+}
+
+.description h2 {
+  font-size: 35px;
+  font-family: monospace;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.description p {
+  line-height: 2em;
+  text-align: center;
+}
+
+.yearbook {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 0;
+  color: white;
+  background-color: #706b80;
+}
+
+.yearbook p {
+  font-size: 14px;
+  font-family: monospace;
+  margin-bottom: 30px;
+}
+
+.yearbook input,
+.yearbook button {
+  padding: 7px;
+  border: 1px solid #b7b7b7;
+  border-radius: 20px;
+  background-color: transparent;
+  color: white;
+  font-family: monospace;
+}
+
+.yearbook input {
+  width: 250px;
+  margin-right: 18px;
+}
+
+.yearbook button {
+  width: 85px;
+  cursor: pointer;
+}
+
+input::placeholder {
+  color: white;
+}
+
+input:focus {
+  border-color: skyblue;
+  outline: none;
+}
+
+button:focus {
+  border-color: skyblue;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  font-size: 12px;
+  color: #a99d9d;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* 漢堡選單css設計 */
+.menubox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  min-height: 80px;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: none;
+}
+
+.bar {
+  display: block;
+  background-color: rgb(227, 226, 226);
+  margin: 5px auto;
+  height: 3px;
+  width: 20px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+/*modal相關css設計*/
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.modal-content {
+  font-size: 1.3rem;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  background-color: rgba(47, 79, 79, 0.8);
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+/* RWD_螢幕寬度小於1250px時的css設計 */
+@media (max-width: 1250px) {
+  /* 漢堡選單相關 */
+  /* 網頁上顯示漢堡圖示 */
+  .hamburger {
+    display: block;
+  }
+
+  /* 四條橫槓圖示轉換為叉叉圖示的動畫 */
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0; /* 將第二條線隱藏 */
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .hamburger.active .bar:nth-child(4) {
+    transform: scaleX(0); /* 將第四條線完全隱藏 */
+  }
+
+  /* 直式menu (隱藏)*/
+  .normalmenu {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    top: 80px;
+    gap: 0;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.4s;
+    line-height: 22px;
+    padding: 16px 0;
+    background-color: rgba(35, 28, 26, 0.9);
+  }
+
+  /* 直式menu（顯示） */
+  .normalmenu.active {
+    left: 0;
+  }
+
+  .menu-item {
+    display: block;
+    margin: 5px 0;
+  }
+
+  /* 非漢堡選單 */
+  header {
+    height: 80px;
+  }
+
+  header h1 {
+    line-height: 80px;
+    width: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .intro h2 {
+    font-size: 30px;
+  }
+
+  .intro p {
+    font-size: 14px;
+  }
+
+  .intro a {
+    font-size: 12px;
+    border: 1px solid #acacac;
+    padding: 8px 16px;
+  }
+  .gallery {
+    flex-direction: column;
+    padding: 80px 0;
+  }
+
+  .gallery div {
+    margin-bottom: 40px;
+  }
+
+  .motto {
+    font-size: 20px;
+    line-height: 2em;
+    height: 150px;
+  }
+  .symbol {
+    flex-direction: column;
+  }
+
+  .symbol img {
+    width: 100%;
+  }
+
+  .description {
+    width: 100%;
+    padding: 60px 0;
+  }
+
+  .description h2 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .yearbook {
+    padding: 50px 0;
+  }
+
+  .yearbook p {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  .yearbook input,
+  .yearbook button {
+    font-size: 11px;
+  }
+
+  .yearbook input {
+    width: 200px;
+    margin-right: 16px;
+  }
+
+  .yearbook button {
+    width: 55px;
+  }
+
+  footer {
+    height: 25px;
+    font-size: 9px;
+  }
+}
